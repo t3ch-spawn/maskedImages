@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Fette Franktur";
+  src: url("./assets/FetteUNZFraktur.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fette {
+  font-family: "Faculty Glyphic";
+}
+
+body {
+  font-family: "Faculty Glyphic";
+}
+
+@media screen and (max-width: 768px) {
+  .fette {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .fette {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .fette {
+    font-size: 30px;
+  }
+}
+
+@layer base {
+  .pic-container {
+    @apply overflow-hidden top-0 sticky;
+  }
+}
+
+.mask-container {
+  /* clip-path: inset(50% 50% 50% 50%); */
+}
+
+mask,
+svg,
+.square-clip,
+defs {
+  perspective: 100px;
+}
+
+.path-test {
+  /* clip-path: polygon(341px 742px, 642px 913px, 812px 1083px, 171px 1083px); */
+  /* clip-path: polygon(47.36% 183.67%, 52.64% 110%, 35.28% 147.35%, 64.72% 147.35% ); */
+}
+
+.test-clip {
+  transform: skewY(0deg) rotateY(20deg);
+  transform-style: preserve-3d;
+}
+
+.mask-parent {
+  perspective: 500px;
+}
+
+#mask-window {
+  transform-style: preserve-3d;
+  border: 1px solid red;
+  /* transform: rotateY(40deg); */
+}
+
+.centralise {
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.window {
+  transform-style: preserve-3d;
+  transform: rotateY(40deg);
+  border: 1px solid blue;
+  height: 400px;
+  width: 400px;
+}
+
+.bg-anim.white .word {
+  --stop: 0%;
+  --inv: 100%;
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white var(--stop),
+    rgba(185, 185, 185, 0.4) var(--stop),
+    rgba(185, 185, 185, 0.4) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-anim.black .word {
+  --stop: 0%;
+  --inv: 100%;
+  background: linear-gradient(
+    to right,
+    black 0%,
+    black var(--stop),
+    rgba(0, 0, 0, 0.4) var(--stop),
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.word {
+  vertical-align: bottom;
+}
