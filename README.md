@@ -1,12 +1,11 @@
-# React + Vite
+# Masked Image Animation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
+This project was inspired by an animation I saw on the portfolio site of a web designer (https://www.clayboan.com/work). I found the effect visually striking and decided to replicate it as a way to sharpen my animation and frontend skills.  
 
-Currently, two official plugins are available:
+## Technologies
+I used **React**, **GSAP**, and **TailwindCSS** to build and style the animation.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Live Site
+Hosted on Netlify  
+https://masked-images.netlify.app/
